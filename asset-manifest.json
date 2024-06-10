@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.269be31e.css",
-    "main.js": "/static/js/main.5766f17d.js",
+    "main.css": "/static/css/main.7ff912f3.css",
+    "main.js": "/static/js/main.73051172.js",
     "static/media/aabia.jpg": "/static/media/aabia.b335dd0bd9cca9c864b0.jpg",
     "index.html": "/index.html",
-    "main.269be31e.css.map": "/static/css/main.269be31e.css.map",
-    "main.5766f17d.js.map": "/static/js/main.5766f17d.js.map"
+    "main.7ff912f3.css.map": "/static/css/main.7ff912f3.css.map",
+    "main.73051172.js.map": "/static/js/main.73051172.js.map"
   },
   "entrypoints": [
-    "static/css/main.269be31e.css",
-    "static/js/main.5766f17d.js"
+    "static/css/main.7ff912f3.css",
+    "static/js/main.73051172.js"
   ]
 }
