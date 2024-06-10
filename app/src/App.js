@@ -6,12 +6,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Hello my name is Aabia!
+        <p style={{fontFamily: 'Fira Sans'}}>
+         Hello my name is Aabia, I'm a BME and CSE student at UofM!
         </p>
+        <p style={{fontFamily: 'Fira Sans'}}>
         Website Under Construction
-        <a href="AabiaHasan_Resume.pdf">
-        Resume
+        </p>
+        <a href="https://www.linkedin.com/in/aabiahasan/">
+        <i class="fab fa-linkedin"></i>
         </a>
       </header>
     </div>
