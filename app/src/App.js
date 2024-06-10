@@ -10,6 +10,9 @@ function App() {
          Hello my name is Aabia!
         </p>
         Website Under Construction
+        <a href="AabiaHasan_Resume.pdf">
+        Resume
+        </a>
       </header>
     </div>
   );
