@@ -1,8 +1,10 @@
 // App.js
 import React, { useState } from 'react';
-import logo from './aabia.jpg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Sidebar from './Sidebar';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,27 +14,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      <div className={`container ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-        <header className="App-header">
-          <div className="content">
-            <img src={logo} className="App-logo" alt="logo" />
-            <div>
-              <p style={{ fontFamily: 'Fira Sans' }}>
-                Hello my name is Aabia, I'm a BME and CSE student at UofM!
-              </p>
-              <p style={{ fontFamily: 'Fira Sans' }}>
-                Website Under Construction
-              </p>
-              <a href="https://www.linkedin.com/in/aabiahasan/">
-                <i className="fab fa-linkedin"></i>
-              </a>
-            </div>
-          </div>
-        </header>
+    <Router>
+      <div className="App">
+        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        <div className={`container ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+          <Routes>
+            <Route path='/' exact element={<Home/>} />
+            <Route path='/contact' element={<Contact/>} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

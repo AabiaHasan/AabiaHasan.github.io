@@ -1,5 +1,6 @@
 // Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -8,8 +9,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
+          <li><Link to="/contact" onClick={toggleSidebar}>Contact</Link></li>
         </ul>
       </div>
       {!isOpen && (
