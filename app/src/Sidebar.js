@@ -9,8 +9,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
         <ul>
-          <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
-          <li><Link to="/contact" onClick={toggleSidebar}>Contact</Link></li>
+          <li><Link to="/" onClick={toggleSidebar}>HOME</Link></li>
+          <li><Link to="/AboutMe" onClick={toggleSidebar}>ABOUT</Link></li>
+          <li><Link to="/contact" onClick={toggleSidebar}>CONTACT</Link></li>
         </ul>
       </div>
       {!isOpen && (

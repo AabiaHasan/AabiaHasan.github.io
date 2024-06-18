@@ -14,9 +14,6 @@ function Home() {
           <p style={{ fontFamily: 'Fira Sans' }}>
             Website Under Construction
           </p>
-          <a href="https://www.linkedin.com/in/aabiahasan/">
-            <i className="fab fa-linkedin"></i>
-          </a>
         </div>
       </header>
     </div>
