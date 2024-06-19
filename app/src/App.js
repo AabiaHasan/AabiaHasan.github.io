@@ -6,6 +6,7 @@ import Sidebar from './Sidebar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import AboutMe from './pages/AboutMe';
+import Fun_Stuff from './pages/Fun_stuff';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -23,6 +24,7 @@ function App() {
             <Routes>
               <Route path='/' exact element={<Home/>} />
               <Route path='/AboutMe' element={<AboutMe/>} />
+              <Route path='/Fun_stuff' element={<Fun_Stuff/>} />
               <Route path='/contact' element={<Contact/>} />
             </Routes>
           </div>

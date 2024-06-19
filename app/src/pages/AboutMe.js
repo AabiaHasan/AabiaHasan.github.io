@@ -5,7 +5,7 @@ function AboutMe() {
   return (
     <div className="about-me-page">
       <header className="about-me-header">
-        <h1>About Me</h1>
+        <h1>Aabia, the 9-5</h1>
       </header>
       <main className="about-me-content">
         <section className="intro-section">
@@ -33,7 +33,7 @@ function AboutMe() {
         </section>
 
         <section className="interests-section">
-          <h2>Interests</h2>
+          <h2>Professional Interests</h2>
           <p>
           </p>
         </section>

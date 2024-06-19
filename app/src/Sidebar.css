@@ -5,41 +5,43 @@
     left: 0;
     height: 100%;
     z-index: 1;
-}
-
-.sidebar {
+    }
+    
+    .sidebar {
     height: 100%;
     width: 250px;
     position: fixed;
     top: 0;
     left: -250px;
-    background: linear-gradient(to bottom, rgb(208, 158, 225), rgb(185, 215, 243));
+    background: rgb(119, 153, 116);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-}
-
-.sidebar.open {
+    }
+    
+    .sidebar.open {
     left: 0;
-}
-
-.sidebar ul {
+    }
+    
+    .sidebar ul {
     list-style-type: none;
     padding: 0;
-}
-
-.sidebar ul li {
+    }
+    
+    .sidebar ul li {
     padding: 8px;
     text-align: center;
-}
-
-.sidebar ul li a {
+    }
+    
+    .sidebar ul li a {
     text-decoration: none;
     color: white;
     display: block;
-}
-
-.close-btn {
+    font-size: 20px;
+    font-weight: bold;
+    }
+    
+    .close-btn {
     position: absolute;
     top: 20px;
     right: 25px;
@@ -49,21 +51,21 @@
     border: none;
     color: white;
     cursor: pointer;
-}
-
-.open-btn {
-    font-size: 20px;
+    }
+    
+    .open-btn {
+    font-size: 30px;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     background-color: #ffffff00;
-    color: rgb(208, 158, 225);
+    color: rgb(119, 153, 116);
     position: absolute;
     top: 20px;
     left: 0;
     transition: left 0.5s;
-}
-
-.open-btn.hidden {
+    }
+    
+    .open-btn.hidden {
     display: none;
-}
+    }

@@ -15,10 +15,10 @@ function Contact() {
           chat! 
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
-          <a href="mailto:aabiahasan8@gmail.com" style={{ color: '#9370DB', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <a href="mailto:aabiahasan8@gmail.com" style={{ color: 'rgb(119, 153, 116)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
             <i className="fas fa-envelope" style={{ marginRight: '5px' }}></i>
           </a>
-          <a href="https://www.linkedin.com/in/aabiahasan/" style={{ color: '#9370DB', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <a href="https://www.linkedin.com/in/aabiahasan/" style={{ color: 'rgb(119, 153, 116)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
             <i className="fab fa-linkedin" style={{ marginRight: '5px' }}></i>
           </a>
         </div>
