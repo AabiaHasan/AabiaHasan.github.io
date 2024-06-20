@@ -1,43 +1,37 @@
 /* AboutMe.css */
 
 .about-me-page {
-    padding: 20px;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-  }
-  
-  .about-me-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .about-me-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .intro-section,
-  .education-section,
-  .experience-section,
-  .skills-section,
-  .interests-section {
-    text-align: left;
-    margin-bottom: 40px;
-  }
-  
-  .intro-section h2,
-  .education-section h2,
-  .experience-section h2,
-  .skills-section h2,
-  .interests-section h2 {
-    margin-bottom: 10px;
-  }
-  
-  .intro-section p,
-  .education-section p,
-  .experience-section p,
-  .skills-section p,
-  .interests-section p {
-    line-height: 1.6;
-  }
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.about-me-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: rgb(119, 153, 116); /* Ensure text is readable on green background */
+  border-radius: 8px;
+}
+
+.about-me-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.section h2
+{
+  background-color: rgb(119, 153, 116); /* Set background color for the box */
+  padding: 10px 20px; /* Add padding to the box */
+  border-radius: 8px; /* Add rounded corners to the box */
+  color: white; /* Ensure text is readable on green background */
+  display: inline-block; /* Make the box fit the content */
+  margin: 10px 0; /* Add margin around the box */
+}

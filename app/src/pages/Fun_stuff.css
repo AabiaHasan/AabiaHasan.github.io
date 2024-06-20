@@ -1,9 +1,22 @@
+/* Fun_stuff.css */
+
 .content {
-    background-color: white; /* Set background color to black */
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
+    padding: 20px;
+  }
+  
+  .Hobbies-title {
+    margin-bottom: 20px; 
+    color: rgb(119, 153, 116);
+  }
+  
+  .spotify-bar {
+    margin-top: 10px; /* Adjust this to control the space above the Spotify bar */
+    width: 80%; /* Adjust the width as needed (e.g., 100% for full width, 80% for narrower) */
+    max-width: 500px; /* Adjust the max-width as needed */
+    height: 500px; /* Adjust the height to make it skinnier */
+    border-radius: 12px;
+  }
+  

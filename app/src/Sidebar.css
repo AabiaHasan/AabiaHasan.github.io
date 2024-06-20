@@ -10,7 +10,7 @@
     .sidebar {
     height: 100%;
     width: 250px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -250px;
     background: rgb(119, 153, 116);

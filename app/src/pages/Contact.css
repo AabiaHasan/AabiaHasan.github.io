@@ -13,6 +13,6 @@
 .Contact-header {
 text-align: center;
 font-size: calc(10px + 2vmin);
-color: black; 
+color: rgb(119, 153, 116); 
 background-color: white;/* Change text color to white for better contrast */
 }
