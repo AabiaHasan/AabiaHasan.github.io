@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#3f7ea6" />
   <meta name="description" content="Notes from the field, the Aabia Hasan Photography journal." />
   <title>Journal | Aabia Hasan Photography</title>
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
 </head>
 <body data-page="journal">
   <header class="navbar">
@@ -18,6 +18,7 @@
         <a href="about.html" class="navbar-link" data-nav="about">About</a>
         <a href="journal.html" class="navbar-link" data-nav="journal">Journal</a>
         <a href="contact.html" class="navbar-link" data-nav="contact">Contact</a>
+        <button class="navbar-random-btn" type="button" data-random-photo-trigger aria-label="Show a random photo">🎲</button>
       </nav>
       <button class="navbar-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
     </div>
@@ -27,6 +28,7 @@
       <a href="about.html" class="navbar-link" data-nav="about">About</a>
       <a href="journal.html" class="navbar-link" data-nav="journal">Journal</a>
       <a href="contact.html" class="navbar-link" data-nav="contact">Contact</a>
+      <button class="navbar-random-btn" type="button" data-random-photo-trigger aria-label="Show a random photo">🎲 Surprise me</button>
     </nav>
   </header>
 
@@ -34,7 +36,7 @@
     <div class="container page-header">
       <span class="eyebrow">Journal</span>
       <h1>Notes from the field</h1>
-      <p>Stories, process notes, and behind-the-scenes from shoots. Drop a new Markdown file into <code>content/blog</code> and run the update script to publish a post here.</p>
+      <p>Stories, process notes, and behind-the-scenes from shoots.</p>
     </div>
     <div class="container">
       <div class="journal-list" data-journal-list></div>
@@ -62,8 +64,10 @@
   </footer>
 
   <script src="data/blog-posts.js"></script>
+  <script src="data/gallery-images.js"></script>
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/random-photo.js"></script>
   <script src="js/journal.js"></script>
 </body>
 </html>
