@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#3f7ea6" />
+  <meta name="description" content="Notes from the field — the Aabia Hasan Photography journal." />
+  <title>Journal — Aabia Hasan Photography</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="journal">
+  <header class="navbar">
+    <div class="navbar-inner container">
+      <a href="index.html" class="navbar-brand">Aabia Hasan<span class="navbar-brand-sub">Photography</span></a>
+      <nav class="navbar-links navbar-links-desktop">
+        <a href="index.html" class="navbar-link" data-nav="home">Home</a>
+        <a href="gallery.html" class="navbar-link" data-nav="gallery">Gallery</a>
+        <a href="about.html" class="navbar-link" data-nav="about">About</a>
+        <a href="journal.html" class="navbar-link" data-nav="journal">Journal</a>
+        <a href="contact.html" class="navbar-link" data-nav="contact">Contact</a>
+      </nav>
+      <button class="navbar-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="navbar-links-mobile">
+      <a href="index.html" class="navbar-link" data-nav="home">Home</a>
+      <a href="gallery.html" class="navbar-link" data-nav="gallery">Gallery</a>
+      <a href="about.html" class="navbar-link" data-nav="about">About</a>
+      <a href="journal.html" class="navbar-link" data-nav="journal">Journal</a>
+      <a href="contact.html" class="navbar-link" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-shell fade-in">
+    <div class="container page-header">
+      <span class="eyebrow">Journal</span>
+      <h1>Notes from the field</h1>
+      <p>Stories, process notes, and behind-the-scenes from shoots. Drop a new Markdown file into <code>content/blog</code> and run the update script to publish a post here.</p>
+    </div>
+    <div class="container">
+      <div class="journal-list" data-journal-list></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Aabia Hasan</div>
+        <p class="footer-tagline">Photography &amp; visual stories, in light and blue.</p>
+      </div>
+      <div class="footer-links">
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:aabiahasan8@gmail.com">Email</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom container"><span>© <span data-year></span> Aabia Hasan. All rights reserved.</span></div>
+  </footer>
+
+  <script src="data/blog-posts.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/journal.js"></script>
+</body>
+</html>

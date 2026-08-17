@@ -1,0 +1,9 @@
+This app/ folder (a React/Create React App project) is no longer used.
+
+The site was rebuilt as a plain HTML/CSS/JS site living at the repo root
+(index.html, css/, js/, images/, content/, data/, scripts/) — no npm
+install, no build step, no dev server required. See
+../PHOTOGRAPHY_SITE_GUIDE.md for how it works.
+
+This whole app/ folder (including node_modules/) is safe to delete
+whenever you like.
