@@ -88,6 +88,50 @@ you were listening to, or one that just matches the photo.
 Photos with a paired song get a small ♪ badge on their thumbnail. Full
 details and more examples are in `content/SPOTIFY-LINKS-README.txt`.
 
+## Updating the site from github.com (no git required)
+
+Once the one-time setup below is done, you can add photos and journal posts
+straight from GitHub's website — no `git pull`/`git push`, no terminal.
+
+**One-time setup:**
+
+1. On your repo on GitHub, go to **Settings → Actions → General**, scroll to
+   "Workflow permissions", choose **Read and write permissions**, and save.
+2. Add the workflow file: go to your repo → **Add file → Create new file**,
+   name it exactly `.github/workflows/update-photos.yml` (typing the slashes
+   creates the folders), paste in the contents of
+   `.github/workflows/update-photos.yml` from this project, and commit
+   directly to `main`.
+
+That's it — from now on, any push to `main` that touches `images/` or
+`content/` automatically re-runs the update script for you and commits the
+regenerated `data/*.js` files.
+
+**Adding photos, day to day:**
+
+1. Rename your photo files descriptively on your computer (the filename
+   becomes the caption).
+2. On github.com, browse to `images/gallery/<category>/` (or create a new
+   category folder by typing its name in the upload path), click
+   **Add file → Upload files**, drag your photos in, and commit directly to
+   `main`.
+3. Check the **Actions** tab — within a minute the workflow runs and your
+   photos are live on the site. No local steps needed.
+
+**Adding a journal post, day to day:**
+
+1. On github.com, browse to `content/blog/`, click **Add file → Create new
+   file**, name it `2026-09-02-your-title.md` (date + slug), and paste in
+   the frontmatter + Markdown body (see "Adding journal/blog posts" above).
+2. Optional cover photo: upload it to `images/blog/` with the matching slug
+   filename, same way as adding gallery photos.
+3. Commit directly to `main` — the Action regenerates `data/blog-posts.js`
+   automatically.
+
+You can still use the local script (`node scripts/update-photos.js` +
+`git push`) any time you prefer working from your own machine — both
+approaches keep the site in sync the same way.
+
 ## Putting it live on GitHub Pages
 
 Because there's no build step, this is the simplest possible setup:

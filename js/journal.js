@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!posts.length) {
     listEl.innerHTML =
-      '<p class="home-empty-note">No journal entries yet — add a <code>.md</code> file to <code>content/blog</code> and run the update script.</p>';
+      '<p class="home-empty-note">No journal entries yet. Add a <code>.md</code> file to <code>content/blog</code> and run the update script.</p>';
     return;
   }
 

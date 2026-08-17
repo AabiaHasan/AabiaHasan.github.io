@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.GalleryView.renderGrid(featuredGrid, featured);
     } else {
       featuredGrid.innerHTML =
-        '<p class="home-empty-note">No photos yet — drop some into <code>images/gallery/&lt;category&gt;/</code> and run the update script.</p>';
+        '<p class="home-empty-note">No photos yet. Drop some into <code>images/gallery/&lt;category&gt;/</code> and run the update script.</p>';
     }
   }
 

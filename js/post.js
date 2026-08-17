@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  document.title = `${post.title} — Aabia Hasan Photography`;
+  document.title = `${post.title} | Aabia Hasan Photography`;
 
   headerEl.innerHTML = `
     <a href="journal.html" class="journal-post-back">← Journal</a>

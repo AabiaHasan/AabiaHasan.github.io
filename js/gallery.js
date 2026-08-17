@@ -9,7 +9,7 @@ window.GalleryView = (() => {
     container.innerHTML = '';
     if (!images.length) {
       container.innerHTML =
-        '<p class="home-empty-note">No photos in this category yet — drop some into <code>images/gallery/&lt;category&gt;/</code> and run the update script.</p>';
+        '<p class="home-empty-note">No photos in this category yet. Drop some into <code>images/gallery/&lt;category&gt;/</code> and run the update script.</p>';
       return;
     }
     images.forEach((image, i) => {

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!CONTACT_FORM_ENDPOINT) {
       const subject = encodeURIComponent(`New message from ${name || 'your website'}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
       return;
     }
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({ name, email, message }),
       });
       if (res.ok) {
-        statusEl.textContent = 'Message sent — thank you!';
+        statusEl.textContent = 'Message sent, thank you!';
         statusEl.className = 'contact-status is-success';
         form.reset();
       } else {
         throw new Error('Request failed');
       }
     } catch (err) {
-      statusEl.innerHTML = `Something went wrong — email me directly at <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>.`;
+      statusEl.innerHTML = `Something went wrong. Email me directly at <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>.`;
       statusEl.className = 'contact-status is-error';
     } finally {
       submitBtn.disabled = false;
