@@ -17,6 +17,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const IMAGES_DIR = path.join(ROOT, 'images');
 const CONTENT_DIR = path.join(ROOT, 'content', 'blog');
+const SPOTIFY_LINKS_FILE = path.join(ROOT, 'content', 'spotify-links.json');
 const DATA_DIR = path.join(ROOT, 'data');
 
 const IMAGE_EXT = /\.(jpe?g|png|webp)$/i;
@@ -133,6 +134,49 @@ function estimateReadingTime(markdown) {
   return Math.max(1, Math.round(words / 200));
 }
 
+// ---------- Spotify song ↔ photo pairing ----------
+
+// Accepts a normal Spotify share link (open.spotify.com/track/...), a
+// spotify: URI (spotify:track:...), or an already-embeddable URL, and
+// returns the iframe-embeddable URL. Returns null if it doesn't look like
+// a Spotify link at all (so a typo doesn't silently break the build).
+function toSpotifyEmbedUrl(rawUrl) {
+  if (!rawUrl) return null;
+  const url = rawUrl.trim();
+
+  const uriMatch = /^spotify:(track|album|playlist|episode|show):([A-Za-z0-9]+)/.exec(url);
+  if (uriMatch) return `https://open.spotify.com/embed/${uriMatch[1]}/${uriMatch[2]}`;
+
+  const linkMatch = /open\.spotify\.com\/(?:embed\/)?(track|album|playlist|episode|show)\/([A-Za-z0-9]+)/.exec(url);
+  if (linkMatch) return `https://open.spotify.com/embed/${linkMatch[1]}/${linkMatch[2]}`;
+
+  return null;
+}
+
+// Reads content/spotify-links.json — a simple { "photo-filename": "spotify link" }
+// map — and returns { [slugified filename without extension]: embedUrl }.
+function loadSpotifyLinks() {
+  if (!fs.existsSync(SPOTIFY_LINKS_FILE)) return {};
+  let raw;
+  try {
+    raw = JSON.parse(fs.readFileSync(SPOTIFY_LINKS_FILE, 'utf8'));
+  } catch (err) {
+    console.warn(`\nWARNING: content/spotify-links.json is not valid JSON (${err.message}) — skipping song pairings this run.\n`);
+    return {};
+  }
+  const result = {};
+  Object.entries(raw).forEach(([key, value]) => {
+    if (key.startsWith('_')) return; // allow "_comment"-style keys to be ignored
+    const embedUrl = toSpotifyEmbedUrl(value);
+    if (!embedUrl) {
+      console.warn(`WARNING: content/spotify-links.json — "${key}" doesn't look like a Spotify link, skipping: ${value}`);
+      return;
+    }
+    result[slugify(key.replace(/\.[^/.]+$/, ''))] = embedUrl;
+  });
+  return result;
+}
+
 // ---------------------------------------------------------------------
 
 function writeDataFile(filename, varName, value) {
@@ -163,14 +207,22 @@ const categories = fs.existsSync(galleryRoot)
       .sort()
   : [];
 
+const spotifyLinks = loadSpotifyLinks();
+let spotifyPairedCount = 0;
+
 const galleryData = {};
 categories.forEach((category) => {
   const files = listImages(path.join(galleryRoot, category));
-  galleryData[category] = files.map((f) => ({
-    src: `images/gallery/${category}/${f}`,
-    title: titleCase(f),
-    category,
-  }));
+  galleryData[category] = files.map((f) => {
+    const spotify = spotifyLinks[slugify(f.replace(/\.[^/.]+$/, ''))] || null;
+    if (spotify) spotifyPairedCount++;
+    return {
+      src: `images/gallery/${category}/${f}`,
+      title: titleCase(f),
+      category,
+      spotify,
+    };
+  });
 });
 writeDataFile('gallery-images.js', 'GALLERY_IMAGES', galleryData);
 
@@ -213,4 +265,4 @@ const posts = postFiles
 
 writeDataFile('blog-posts.js', 'BLOG_POSTS', posts);
 
-console.log(`\nDone: ${heroFiles.length} hero photo(s), ${categories.length} gallery categor${categories.length === 1 ? 'y' : 'ies'} (${Object.values(galleryData).reduce((n, a) => n + a.length, 0)} photos), ${posts.length} journal post(s).`);
+console.log(`\nDone: ${heroFiles.length} hero photo(s), ${categories.length} gallery categor${categories.length === 1 ? 'y' : 'ies'} (${Object.values(galleryData).reduce((n, a) => n + a.length, 0)} photos, ${spotifyPairedCount} paired with a song), ${posts.length} journal post(s).`);

@@ -3,90 +3,236 @@
 window.GALLERY_IMAGES = {
   "landscape": [
     {
-      "src": "images/gallery/landscape/coastal-fog.jpg",
-      "title": "Coastal Fog",
-      "category": "landscape"
+      "src": "images/gallery/landscape/canyon-waterfall-from-above.jpg",
+      "title": "Canyon Waterfall From Above",
+      "category": "landscape",
+      "spotify": null
     },
     {
-      "src": "images/gallery/landscape/quiet-shoreline.jpg",
-      "title": "Quiet Shoreline",
-      "category": "landscape"
+      "src": "images/gallery/landscape/diamond-beach-ice.jpg",
+      "title": "Diamond Beach Ice",
+      "category": "landscape",
+      "spotify": null
     },
     {
-      "src": "images/gallery/landscape/ridgeline-at-dusk.jpg",
-      "title": "Ridgeline At Dusk",
-      "category": "landscape"
+      "src": "images/gallery/landscape/fog-over-the-snow-peak.jpg",
+      "title": "Fog Over The Snow Peak",
+      "category": "landscape",
+      "spotify": null
     },
     {
-      "src": "images/gallery/landscape/valley-in-blue.jpg",
-      "title": "Valley In Blue",
-      "category": "landscape"
+      "src": "images/gallery/landscape/foggy-shoreline-and-boulder.jpg",
+      "title": "Foggy Shoreline And Boulder",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/glacier-lagoon-icebergs.jpg",
+      "title": "Glacier Lagoon Icebergs",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/golden-light-waterfall.jpg",
+      "title": "Golden Light Waterfall",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/island-silhouette-at-sea.jpg",
+      "title": "Island Silhouette At Sea",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/misty-sea-stack.jpg",
+      "title": "Misty Sea Stack",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/palm-tree-at-sunset.jpg",
+      "title": "Palm Tree At Sunset",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/rocky-island-from-the-boat.jpg",
+      "title": "Rocky Island From The Boat",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/sea-cave-arch.jpg",
+      "title": "Sea Cave Arch",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/snow-dusted-basalt-columns.jpg",
+      "title": "Snow Dusted Basalt Columns",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/sunset-over-the-lake.jpg",
+      "title": "Sunset Over The Lake",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/sunset-through-bare-trees.jpg",
+      "title": "Sunset Through Bare Trees",
+      "category": "landscape",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/landscape/waterfall-in-the-cave.jpg",
+      "title": "Waterfall In The Cave",
+      "category": "landscape",
+      "spotify": null
     }
   ],
   "nature": [
     {
-      "src": "images/gallery/nature/forest-blue-hour.jpg",
-      "title": "Forest Blue Hour",
-      "category": "nature"
+      "src": "images/gallery/nature/giant-redwood-trunk.jpg",
+      "title": "Giant Redwood Trunk",
+      "category": "nature",
+      "spotify": null
     },
     {
-      "src": "images/gallery/nature/moss-and-mist.jpg",
-      "title": "Moss And Mist",
-      "category": "nature"
+      "src": "images/gallery/nature/magenta-bougainvillea.jpg",
+      "title": "Magenta Bougainvillea",
+      "category": "nature",
+      "spotify": null
     },
     {
-      "src": "images/gallery/nature/quiet-undergrowth.jpg",
-      "title": "Quiet Undergrowth",
-      "category": "nature"
+      "src": "images/gallery/nature/pile-of-red-apples.jpg",
+      "title": "Pile Of Red Apples",
+      "category": "nature",
+      "spotify": null
+    }
+  ],
+  "night": [
+    {
+      "src": "images/gallery/night/boat-dock-after-dark.jpg",
+      "title": "Boat Dock After Dark",
+      "category": "night",
+      "spotify": null
     },
     {
-      "src": "images/gallery/nature/sage-treeline.jpg",
-      "title": "Sage Treeline",
-      "category": "nature"
+      "src": "images/gallery/night/loop-building-neon-sign.jpg",
+      "title": "Loop Building Neon Sign",
+      "category": "night",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/night/michigan-theatre-marquee.jpg",
+      "title": "Michigan Theatre Marquee",
+      "category": "night",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/night/milky-way-over-the-treeline.jpg",
+      "title": "Milky Way Over The Treeline",
+      "category": "night",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/night/moonrise-over-the-diner.jpg",
+      "title": "Moonrise Over The Diner",
+      "category": "night",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/night/stars-and-silhouette-pine.jpg",
+      "title": "Stars And Silhouette Pine",
+      "category": "night",
+      "spotify": null
     }
   ],
   "portrait": [
     {
-      "src": "images/gallery/portrait/evening-bokeh.jpg",
-      "title": "Evening Bokeh",
-      "category": "portrait"
+      "src": "images/gallery/portrait/beach-catch-at-the-lake.jpg",
+      "title": "Beach Catch At The Lake",
+      "category": "portrait",
+      "spotify": null
     },
     {
-      "src": "images/gallery/portrait/golden-hour-glow.jpg",
-      "title": "Golden Hour Glow",
-      "category": "portrait"
+      "src": "images/gallery/portrait/hiking-through-the-pines.jpg",
+      "title": "Hiking Through The Pines",
+      "category": "portrait",
+      "spotify": null
     },
     {
-      "src": "images/gallery/portrait/quiet-blue-portrait.jpg",
-      "title": "Quiet Blue Portrait",
-      "category": "portrait"
+      "src": "images/gallery/portrait/overlooking-the-glacier.jpg",
+      "title": "Overlooking The Glacier",
+      "category": "portrait",
+      "spotify": null
     },
     {
-      "src": "images/gallery/portrait/soft-window-light.jpg",
-      "title": "Soft Window Light",
-      "category": "portrait"
+      "src": "images/gallery/portrait/standing-before-the-waterfall.jpg",
+      "title": "Standing Before The Waterfall",
+      "category": "portrait",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/portrait/swimmers-in-blue-water.jpg",
+      "title": "Swimmers In Blue Water",
+      "category": "portrait",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/portrait/two-silhouettes-on-the-beach.jpg",
+      "title": "Two Silhouettes On The Beach",
+      "category": "portrait",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/portrait/walking-the-coastal-boardwalk.jpg",
+      "title": "Walking The Coastal Boardwalk",
+      "category": "portrait",
+      "spotify": null
     }
   ],
   "street": [
     {
-      "src": "images/gallery/street/blue-hour-crossing.jpg",
-      "title": "Blue Hour Crossing",
-      "category": "street"
+      "src": "images/gallery/street/foggy-city-rooftops.jpg",
+      "title": "Foggy City Rooftops",
+      "category": "street",
+      "spotify": null
     },
     {
-      "src": "images/gallery/street/city-fog-lines.jpg",
-      "title": "City Fog Lines",
-      "category": "street"
+      "src": "images/gallery/street/green-lights-at-dusk.jpg",
+      "title": "Green Lights At Dusk",
+      "category": "street",
+      "spotify": null
     },
     {
-      "src": "images/gallery/street/morning-commute.jpg",
-      "title": "Morning Commute",
-      "category": "street"
+      "src": "images/gallery/street/ivy-covered-brick-hall.jpg",
+      "title": "Ivy Covered Brick Hall",
+      "category": "street",
+      "spotify": null
     },
     {
-      "src": "images/gallery/street/quiet-avenue.jpg",
-      "title": "Quiet Avenue",
-      "category": "street"
+      "src": "images/gallery/street/stanford-memorial-church.jpg",
+      "title": "Stanford Memorial Church",
+      "category": "street",
+      "spotify": null
+    }
+  ],
+  "wildlife": [
+    {
+      "src": "images/gallery/wildlife/owl-butterfly-macro.jpg",
+      "title": "Owl Butterfly Macro",
+      "category": "wildlife",
+      "spotify": null
+    },
+    {
+      "src": "images/gallery/wildlife/red-and-blue-poison-dart-frog.jpg",
+      "title": "Red And Blue Poison Dart Frog",
+      "category": "wildlife",
+      "spotify": null
     }
   ]
 };

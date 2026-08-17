@@ -19,9 +19,10 @@ it's not required.)
 1. Drop image files into the right folder:
    - **Homepage hero banner:** `images/hero/`
    - **Gallery:** `images/gallery/<category>/` — the existing categories
-     are `landscape`, `nature`, `portrait`, `street`. Drop a photo into one
-     of those, or create a **brand-new folder** (e.g. `images/gallery/wedding/`)
-     to get a brand-new filter tab on the Gallery page.
+     are `landscape`, `nature`, `night`, `portrait`, `street`, and
+     `wildlife`. Drop a photo into one of those, or create a **brand-new
+     folder** (e.g. `images/gallery/wedding/`) to get a brand-new filter
+     tab on the Gallery page.
    - **About page portrait:** `images/about/` (first image found is used)
 2. Run the update script:
    - **Windows:** double-click `scripts/update-photos.bat`
@@ -32,9 +33,18 @@ it's not required.)
 Filenames become captions (`misty-coastline.jpg` → "Misty Coastline"), so
 name your files with dashes or underscores between words.
 
-All the photos on the site right now are placeholder abstract images I
-generated to show the design — swap them out with your real work by
-replacing the files in these folders and re-running the script.
+The Gallery, homepage featured strip, and hero banner are running your
+real photos now. The About page portrait is still the original placeholder
+— drop a real headshot/portrait into `images/about/` and re-run the script
+whenever you're ready to swap it in.
+
+**A note on raw originals:** keep full-resolution camera files (the
+`DSC0xxxx.JPG`-style exports) out of a `pictures/`-style folder at the
+project root rather than `images/` — `images/` is what actually ships on
+the site, so it should only hold the resized, web-ready versions the
+update script needs. `.gitignore` already excludes a root-level
+`pictures/` folder so raw dumps don't get committed to the repo by
+accident.
 
 ## Adding journal/blog posts
 
@@ -56,6 +66,27 @@ replacing the files in these folders and re-running the script.
    the filename after the date) to `images/blog/` — e.g.
    `shooting-the-blue-hour.jpg`.
 3. Run the update script (see above), then refresh `journal.html`.
+
+## Pairing a Spotify song with a photo
+
+Open a photo in the Gallery (or the homepage's Featured Work section) and
+it can carry a little embedded Spotify player right below it — the song
+you were listening to, or one that just matches the photo.
+
+1. Open `content/spotify-links.json`.
+2. Add a line: the photo's filename as the key, a Spotify share link as
+   the value:
+   ```json
+   {
+     "misty-coastline.jpg": "https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT"
+   }
+   ```
+   Get the link from Spotify: right-click (or tap "...") on a song → Share
+   → Copy Song Link. Album and playlist links work too.
+3. Run the update script (see "Adding photos" above), then refresh.
+
+Photos with a paired song get a small ♪ badge on their thumbnail. Full
+details and more examples are in `content/SPOTIFY-LINKS-README.txt`.
 
 ## Putting it live on GitHub Pages
 
@@ -99,6 +130,7 @@ data/                                   AUTO-GENERATED — don't hand-edit these
   about-image.js, blog-posts.js
 images/                                 Your photos, organized by section
 content/blog/                           Your journal posts (Markdown files)
+content/spotify-links.json              Photo ↔ Spotify song pairings
 scripts/update-photos.js                The script that turns images/ + content/
                                          into the data/*.js files above
 js/config.js                            Contact form endpoint + site settings
@@ -111,8 +143,6 @@ To change the color palette, edit the CSS custom properties at the top of
 
 - Swap the placeholder photos for your real work (see "Adding photos").
 - Add real favicon/app icons if you'd like a custom browser tab icon.
-- Update the Instagram link in the footer of each HTML file (search for
-  `instagram.com`) once you have a real profile to link to.
 
 ## About the old `app/` folder
 

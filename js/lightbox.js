@@ -10,6 +10,20 @@ window.Lightbox = (() => {
     root.querySelector('.lightbox-figure img').src = image.src;
     root.querySelector('.lightbox-figure img').alt = image.title || '';
     root.querySelector('.lightbox-figure figcaption').textContent = image.title || '';
+
+    const songEl = root.querySelector('.lightbox-song');
+    if (image.spotify) {
+      songEl.hidden = false;
+      songEl.innerHTML = `
+        <span class="lightbox-song-label">♪ Paired song</span>
+        <iframe src="${image.spotify}" width="100%" height="80" frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy" title="Paired Spotify song"></iframe>
+      `;
+    } else {
+      songEl.hidden = true;
+      songEl.innerHTML = '';
+    }
   }
 
   function goPrev() {
@@ -48,6 +62,7 @@ window.Lightbox = (() => {
       <figure class="lightbox-figure">
         <img alt="" />
         <figcaption></figcaption>
+        <div class="lightbox-song" hidden></div>
       </figure>
       ${images.length > 1 ? '<button class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&rsaquo;</button>' : ''}
     `;

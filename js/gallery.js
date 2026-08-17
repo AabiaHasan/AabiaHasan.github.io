@@ -16,7 +16,8 @@ window.GalleryView = (() => {
       const btn = document.createElement('button');
       btn.className = 'gallery-grid-item';
       btn.setAttribute('aria-label', `Open photo: ${image.title}`);
-      btn.innerHTML = `<img src="${image.src}" alt="${image.title}" loading="lazy" /><span class="gallery-grid-caption">${image.title}</span>`;
+      const badge = image.spotify ? '<span class="gallery-grid-badge" title="Paired with a song">♪</span>' : '';
+      btn.innerHTML = `<img src="${image.src}" alt="${image.title}" loading="lazy" />${badge}<span class="gallery-grid-caption">${image.title}</span>`;
       btn.addEventListener('click', () => window.Lightbox.open(images, i));
       container.appendChild(btn);
     });

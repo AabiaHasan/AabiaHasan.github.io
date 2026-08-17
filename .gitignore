@@ -1,0 +1,8 @@
+# Raw/original photo dumps — don't commit full-resolution originals to the repo.
+# Process them with the resize step (see PHOTOGRAPHY_SITE_GUIDE.md), which
+# writes the web-ready versions into images/, then this folder can stay local.
+/pictures/
+
+# OS junk
+.DS_Store
+Thumbs.db
