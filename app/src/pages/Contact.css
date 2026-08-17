@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import './shared.css';
 
 .contact-layout {
@@ -93,3 +94,23 @@
     padding: 28px;
   }
 }
+=======
+/* src/pages/Contact.css */
+
+.contact-page {
+    background-color: white; /* Set background color to black */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.Contact-header {
+text-align: center;
+font-size: calc(10px + 2vmin);
+color: rgb(119, 153, 116); 
+background-color: white;/* Change text color to white for better contrast */
+}
+>>>>>>> 33e1659a66c37c911fde49f0e153d280117a4285

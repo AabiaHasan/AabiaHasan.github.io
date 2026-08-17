@@ -1,0 +1,71 @@
+/* Sidebar.css */
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+    }
+    
+    .sidebar {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    background: rgb(119, 153, 116);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    
+    .sidebar.open {
+    left: 0;
+    }
+    
+    .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    
+    .sidebar ul li {
+    padding: 8px;
+    text-align: center;
+    }
+    
+    .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    }
+    
+    .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    }
+    
+    .open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff00;
+    color: rgb(119, 153, 116);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: left 0.5s;
+    }
+    
+    .open-btn.hidden {
+    display: none;
+    }

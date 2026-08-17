@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { CONTACT_FORM_ENDPOINT, CONTACT_EMAIL } from '../config';
 import './Contact.css';
@@ -113,3 +114,35 @@ export default function Contact() {
     </div>
   );
 }
+=======
+// src/pages/Contact.js
+import React from 'react';
+import './Contact.css';
+
+function Contact() {
+  return (
+    <div className="contact-page">
+      <header className="Contact-header">
+        <h1>Contact Me!</h1>
+        <p style={{ fontFamily: 'Fira Sans' }}>
+          I'd love to 
+          <span role="img" aria-label="coffee">
+            {'\u2615'}
+          </span>
+          chat! 
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
+          <a href="mailto:aabiahasan8@gmail.com" style={{ color: 'rgb(119, 153, 116)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <i className="fas fa-envelope" style={{ marginRight: '5px' }}></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aabiahasan/" style={{ color: 'rgb(119, 153, 116)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <i className="fab fa-linkedin" style={{ marginRight: '5px' }}></i>
+          </a>
+        </div>
+      </header>
+    </div>
+  );
+}
+
+export default Contact;
+>>>>>>> 33e1659a66c37c911fde49f0e153d280117a4285
